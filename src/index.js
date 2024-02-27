@@ -148,6 +148,7 @@ function birdMovement(e) {
             pipeArray = [];
             score = 0;
             gameOver = false;
+            pipeX = ctxWidth;
         } 
     } 
 }
