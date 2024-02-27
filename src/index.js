@@ -37,7 +37,8 @@ let gravity = 0.4;
 
 let gameOver = false;
 let score = 0;
-
+let pipeDistance = ctxWidth / 4;
+ 
 window.onload = function(){
     ctx = document.getElementById("index");
     ctx.height = ctxHeight;
@@ -61,6 +62,7 @@ window.onload = function(){
     requestAnimationFrame(update);
     setInterval(positionPipe,1000);
 
+   
     document.addEventListener("keydown",birdMovement);
 }
 
@@ -133,11 +135,12 @@ function positionPipe() {
     }
 
     pipeArray.push(bottompipeObject);
+    pipeX += pipeDistance;
     
 }
 
 function birdMovement(e) {
-    if(e.code === "Space" || e.code === "ArrowUp" || e.code === "keyX"){
+    if(e.code === "Space" || e.code === "ArrowUp" || e.code === "keyX" || e.type === "touchstart"){
         velocityY = -6;
 
         if (gameOver){
@@ -145,8 +148,8 @@ function birdMovement(e) {
             pipeArray = [];
             score = 0;
             gameOver = false;
-        }
-    }
+        } 
+    } 
 }
 
 function detectCollision(a,b) {
