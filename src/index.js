@@ -33,7 +33,7 @@ let bottomPipeImg;
 
 let velocityX = -2
 let velocityY = 0;
-let gravity = 0.4;
+let gravity = 0.3;
 
 let gameOver = false;
 let score = 0;
