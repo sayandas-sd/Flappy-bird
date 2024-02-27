@@ -62,7 +62,7 @@ window.onload = function(){
     requestAnimationFrame(update);
     setInterval(positionPipe,1000);
 
-   
+    document.addEventListener("touchstart", birdMovement);
     document.addEventListener("keydown",birdMovement);
 }
 
