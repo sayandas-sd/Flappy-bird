@@ -1,8 +1,30 @@
 body{
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    background: linear-gradient(400deg,#d07186 20%, #daba7a ,#7140dc);
+    animation: gradient-animation 8s ease infinite;
+    background-size: 180% 180%;
 }
+@keyframes gradient-animation{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 60%;
 
+    }
+    100%{
+        background-position: 0% 70%;
+    }
+}
 #index{
     background-image: url(./assets/flappybirdbg.png);
+    border-radius: 10px;
+    border: 3px solid black
 }
+p{
+    font-weight: 300;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
