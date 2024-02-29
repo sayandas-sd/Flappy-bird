@@ -76,7 +76,10 @@ function update(){
     velocityY += gravity;
     Flappybird.y = Math.max(Flappybird.y + velocityY, 0);
     context.drawImage(birdImage, Flappybird.x, Flappybird.y, Flappybird.width, Flappybird.height);
-
+    //fall bird 
+    if (Flappybird.y >= ctxHeight - birdHeight) {
+        gameOver = true;
+    }
         //pipes
     for(let i=0; i<pipeArray.length; i++) {
         let allPipe = pipeArray[i];
